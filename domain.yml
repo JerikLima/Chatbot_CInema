@@ -32,3 +32,13 @@ responses:
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+
+#adiciona a ação para salvar o nome da cidade  
+actions:
+- action_save_city
+
+#configura o slot cidade 
+slots:
+  cidade:
+    type: text
+    influence_conversation: false
