@@ -90,3 +90,25 @@ nlu:
     - Quero ir no cinema com meu marido aqui em [Natal](cidade)
     - Me dê a lista de cinemas de [crateús](cidade)
 
+- lookup: cidade
+  examples: |
+    - Fortaleza
+    - Sobral
+    - Mossoró
+    - São Paulo
+    - Rio de Janeiro
+    - Natal
+    - Crateús
+    - Recife
+    - Curitibas
+    - Manaus
+    - Porto Alegre
+    - Florianópolis
+    - Salvador
+    - Belo Horizonte
+    - Brasília
+    - Goiânia
+    - Belém
+    - Campinas
+    - Vitória
+

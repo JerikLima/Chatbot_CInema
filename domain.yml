@@ -8,6 +8,7 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - procurar_cidade
 
 entities:
   - cidade
@@ -39,6 +40,7 @@ session_config:
 #adiciona a ação para salvar o nome da cidade  
 actions:
 - action_save_city
+- action_procurar_cidade
 
 #configura o slot cidade 
 slots:

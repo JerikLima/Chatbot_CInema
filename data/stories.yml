@@ -28,3 +28,23 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
+
+- story: usuário quer encontrar cinemas de uma cidade
+  steps:
+    - intent: procurar_cidade
+      entities:
+        - cidade: "Fortaleza"
+    - action: action_save_city
+    - slot_was_set:
+        - cidade: "Fortaleza"
+    - action: action_procurar_cidade
+
+- story: usuário menciona uma cidade não reconhecida
+  steps:
+    - intent: procurar_cidade
+      entities:
+        - cidade: "Recife"
+    - action: action_save_city
+    - slot_was_set:
+        - cidade: "Recife"
+    - action: action_procurar_cidade
