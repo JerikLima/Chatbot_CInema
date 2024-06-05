@@ -18,6 +18,7 @@ class ActionSaveCity(Action):
         city_entity = next(tracker.get_latest_entity_values("cidade"), None)
         
         if city_entity:
+            dispatcher.utter_message(text=f"você quer cinema de {city_entity}, correto?")
             # Salva a cidade em uma variável (slot)
             return [SlotSet("cidade", city_entity)]
         else:

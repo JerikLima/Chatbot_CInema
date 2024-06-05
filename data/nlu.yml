@@ -79,3 +79,14 @@ nlu:
     - você é um humano?
     - estou falando com um bot?
     - estou falando com um humano?
+
+- intent: procurar_cidade
+  examples: |
+    - quero os cinemas de [Fortaleza](cidade)
+    - Liste  todos os cinemas de [Sobral](cidade)
+    - Estou em [Mossoró](cidade), liste os cinemas da cidade
+    - Quero que me informe todos os cinemas de [São Paulo](cidade)
+    - Me diga quais cinemas tem no [Rio de Janeiro](cidade)
+    - Quero ir no cinema com meu marido aqui em [Natal](cidade)
+    - Me dê a lista de cinemas de [crateús](cidade)
+

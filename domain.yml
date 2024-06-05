@@ -9,6 +9,9 @@ intents:
   - mood_unhappy
   - bot_challenge
 
+entities:
+  - cidade
+
 responses:
   utter_greet:
   - text: "Hey! How are you?"
@@ -41,4 +44,6 @@ actions:
 slots:
   cidade:
     type: text
-    influence_conversation: false
+    influence_conversation: true
+    mappings:
+        - type: from_text
