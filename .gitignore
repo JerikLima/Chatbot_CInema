@@ -1,0 +1,11 @@
+.idea
+.venv
+venv
+models
+.rasa
+gridresults
+__pycache__
+# Tests
+train_test_splits
+results
+.vscode

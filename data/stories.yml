@@ -1,0 +1,51 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: usuário quer encontrar cinemas de uma cidade
+  steps:
+    - intent: procurar_cidade
+      entities:
+        - cidade: "Fortaleza"
+    - action: action_save_city
+    - slot_was_set:
+        - cidade: "Fortaleza"
+    - action: action_procurar_cidade
+
+- story: usuário menciona uma cidade não reconhecida
+  steps:
+    - intent: procurar_cidade
+      entities:
+        - cidade: "Recife"
+    - action: action_save_city
+    - slot_was_set:
+        - cidade: "Recife"
+    - intent: affirm
+    - action: action_procurar_cidade

@@ -1,0 +1,13 @@
+version: "3.1"
+
+rules:
+
+- rule: Diga tchau sempre que o usuário disser tchau
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Diga 'Eu sou um bot' sempre que o usuário perguntar
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
