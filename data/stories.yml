@@ -34,18 +34,7 @@ stories:
   - intent: procurar_cidade
     entities:
       - cidade: "cidade"
-  - action: action_save_city
+  - action: action_procurar_cidade
   - slot_was_set:
       - cidade: "cidade"
-  - action: action_procurar_cidade
 
-#- story: usuário menciona uma cidade não reconhecida
-#  steps:
-#    - intent: procurar_cidade
-#      entities:
-#        - cidade: "Recife"
-#    - action: action_save_city
-#    - slot_was_set:
-#        - cidade: "Recife"
-#    - intent: affirm
-#    - action: action_procurar_cidade
