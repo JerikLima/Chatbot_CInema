@@ -31,21 +31,21 @@ stories:
 
 - story: usuário quer encontrar cinemas de uma cidade
   steps:
-    - intent: procurar_cidade
-      entities:
-        - cidade: "Fortaleza"
-    - action: action_save_city
-    - slot_was_set:
-        - cidade: "Fortaleza"
-    - action: action_procurar_cidade
+  - intent: procurar_cidade
+    entities:
+      - cidade: "cidade"
+  - action: action_save_city
+  - slot_was_set:
+      - cidade: "cidade"
+  - action: action_procurar_cidade
 
-- story: usuário menciona uma cidade não reconhecida
-  steps:
-    - intent: procurar_cidade
-      entities:
-        - cidade: "Recife"
-    - action: action_save_city
-    - slot_was_set:
-        - cidade: "Recife"
-    - intent: affirm
-    - action: action_procurar_cidade
+#- story: usuário menciona uma cidade não reconhecida
+#  steps:
+#    - intent: procurar_cidade
+#      entities:
+#        - cidade: "Recife"
+#    - action: action_save_city
+#    - slot_was_set:
+#        - cidade: "Recife"
+#    - intent: affirm
+#    - action: action_procurar_cidade

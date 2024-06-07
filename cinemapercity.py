@@ -16,7 +16,7 @@ class Cinema:
             cinemas_da_cidade = [cinema['name'] for cinema in cinemas if cinema['cityName'].lower() == nome_cidade.lower()]
 
             if cinemas_da_cidade:
-                print(f"cinemas em {nome_cidade}:")
+                
                 for i in cinemas_da_cidade:
                     cinema.append(i)
             else:

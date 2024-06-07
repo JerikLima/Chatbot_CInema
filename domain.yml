@@ -13,6 +13,14 @@ intents:
 entities:
   - cidade
 
+slots:
+  cidade:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: cidade
+
 responses:
   utter_greet:
   - text: "Hey! How are you?"
@@ -41,11 +49,3 @@ session_config:
 actions:
 - action_save_city
 - action_procurar_cidade
-
-#configura o slot cidade 
-slots:
-  cidade:
-    type: text
-    influence_conversation: true
-    mappings:
-        - type: from_text

@@ -35,7 +35,7 @@ class ActionProcurarCidade(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
         city = tracker.get_slot('cidade')
-        
+        print(f"a entidade é essa {city}")
         if not city:
             dispatcher.utter_message(text="Não foram encontrados cinemas nesse local")
             return []
@@ -47,8 +47,7 @@ class ActionProcurarCidade(Action):
 
         if city.lower() in cities:
             cinemas = Cinema.obter_nome_cinema_por_cidade(city)
-            print(cinemas)
-            dispatcher.utter_message(text=f"Os cinemas em {city} são: {cinemas}")
+            dispatcher.utter_message(text=f"Os cinemas em {city} são:\n" + '\n'.join(cinemas))
         else:
             dispatcher.utter_message(text="Desculpe, não reconhecemos essa cidade. Você pode tentar outra cidade?")
         
