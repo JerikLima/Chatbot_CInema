@@ -95,6 +95,14 @@ nlu:
     - Onde posso encontrar cinemas em [Goiânia](cidade)?
     - cinemas em [Santos](cidade)
 
+- intent: procurar_cinema
+  examples: |
+    - [cinemark](cinema)
+    - [cineflix](cinema)
+    - [uci](cinema)
+    - [kinoplex](cinema)
+
+
 - lookup: cidade
   examples: |
     - Fortaleza

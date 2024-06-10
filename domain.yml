@@ -9,9 +9,11 @@ intents:
   - mood_unhappy
   - bot_challenge
   - procurar_cidade
+  - procurar_cinema
 
 entities:
   - cidade
+  - cinema
 
 slots:
   cidade:
@@ -20,6 +22,12 @@ slots:
     mappings:
       - type: from_entity
         entity: cidade
+  cinema:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: cinema
 
 responses:
   utter_greet:
@@ -29,6 +37,7 @@ responses:
     - text: "Relaxa paizao, vai pro cinema que você se anima!"
 
   utter_did_that_help:
+    - text: "Isso ajudou você?"
     - text: "Isso ajudou você?"
 
   utter_happy:
@@ -52,9 +61,10 @@ session_config:
 
 actions:
   - action_procurar_cidade
+  - action_confirmar_escolha
 
 forms:
   cinema_form:
     required_slots:
       - cidade
-
+      - cinema
