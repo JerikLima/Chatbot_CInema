@@ -23,20 +23,19 @@ slots:
 
 responses:
   utter_greet:
-    - text: "Hey! How are you?"
+    - text: "Iai! como vai você?"
 
   utter_cheer_up:
-    - text: "Here is something to cheer you up:"
-      image: "https://i.imgur.com/nGF1K8f.jpg"
+    - text: "Relaxa paizao, vai pro cinema que você se anima!"
 
   utter_did_that_help:
-    - text: "Did that help you?"
+    - text: "Isso ajudou vocẽ?
 
   utter_happy:
-    - text: "Great, carry on!"
+    - text: "Ótimo, continue"
 
   utter_goodbye:
-    - text: "Bye"
+    - text: "Até a proxima!"
 
   utter_ask_cidade:
     - text: "Em qual cidade você está procurando cinemas?"
@@ -45,13 +44,19 @@ responses:
     - text: "Aqui estão os cinemas em {cidade}:"
 
   utter_iamabot:
-    - text: "I am a bot, powered by Rasa."
+    - text: "Sou um bot de cinema feito por 2 crias do Irede"
 
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 
 actions:
+  - action_procurar_cidade
+
+forms:
+  cinema_form:
+    required_slots:
+      - cidade
   - action_procurar_cidade
 
 forms:
