@@ -37,12 +37,15 @@ stories:
   - action: action_procurar_cidade
   - slot_was_set:
       - cidade: "cidade"
-  - intent: procurar_cinema
+  - intent: escolher_cinema
     entities:
+      - cidade: "cidade"
       - cinema: "cinema"
   -  slot_was_set:
+      - cidade: "cidade"
       - cinema: "cinema"
-  - action: action_confirmar_escolha
+  - action: action_salvar_ids
+
 
 
 

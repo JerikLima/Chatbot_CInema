@@ -27,10 +27,29 @@ class ActionProcurarCidade(Action):
         if unidecode.unidecode(city).lower() in cities:
             cinemas = Cinema.obter_nome_cinema_por_cidade(city)
             botoes = [{"title": cinema, "payload": f"/escolher_cinema{{\"cinema\":\"{cinema}\"}}"} for cinema in cinemas]
-            dispatcher.utter_message(text=f"Os cinemas em {city} são:", buttons=botoes)
+            dispatcher.utter_message(text=f"Aqui está a lista dos cinemas em {city}: \n", buttons=botoes)
         else:
             dispatcher.utter_message(text="Desculpe, não reconhecemos essa cidade. Você pode tentar outra cidade?")
         
-        return []
+        return [Cinema.obter_id_por_cidade(city)]
+    
+
+class ActionProcurarId(Action):
+
+    def name(self) -> Text:
+        return "action_salvar_ids"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
+        movie = tracker.get_slot('cinema')
+        city  = tracker.get_slot('cidade')
+        city_id = Cinema.obter_id_por_cidade(city)
+        movie_id = Cinema.obter_id_por_cinema(movie, city_id)
+        dispatcher.utter_message(text = f"Fala meu chapa, se liga nos filmes em cartaz no {movie}:\n")
+        dispatcher.utter_message(text = f"{Cinema.filmes_por_cinema(city_id, movie_id)}")
+        
+
     
 

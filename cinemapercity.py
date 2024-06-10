@@ -74,6 +74,7 @@ class Cinema:
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
      }
      response = requests.get(url, headers=headers)
+     movie = []
 
      if response.status_code == 200:
         data = response.json()  
@@ -82,9 +83,10 @@ class Cinema:
 
         if titulos_filmes:
             print("Filmes disponíveis no cinema escolhido:")
-            for titulo in titulos_filmes:
-                print(titulo)
+            for i in titulos_filmes:
+                movie.append(i)
         else:
             print("Não foram encontrados filmes disponíveis neste cinema.")
      else:
         print("Não foi possível obter os filmes do cinema.")
+     return "\n".join(movie)

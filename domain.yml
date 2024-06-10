@@ -10,6 +10,10 @@ intents:
   - bot_challenge
   - procurar_cidade
   - procurar_cinema
+<<<<<<< HEAD
+=======
+  - escolher_cinema
+>>>>>>> ad8d031 (back-end finished)
 
 entities:
   - cidade
@@ -60,6 +64,7 @@ session_config:
   carry_over_slots_to_new_session: true
 
 actions:
+  - action_salvar_ids
   - action_procurar_cidade
   - action_confirmar_escolha
 
