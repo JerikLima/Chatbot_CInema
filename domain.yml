@@ -29,13 +29,13 @@ responses:
     - text: "Relaxa paizao, vai pro cinema que você se anima!"
 
   utter_did_that_help:
-    - text: "Isso ajudou vocẽ?
+    - text: "Isso ajudou você?"
 
   utter_happy:
     - text: "Ótimo, continue"
 
   utter_goodbye:
-    - text: "Até a proxima!"
+    - text: "Até a próxima!"
 
   utter_ask_cidade:
     - text: "Em qual cidade você está procurando cinemas?"
@@ -57,9 +57,4 @@ forms:
   cinema_form:
     required_slots:
       - cidade
-  - action_procurar_cidade
 
-forms:
-  cinema_form:
-    required_slots:
-      - cidade
