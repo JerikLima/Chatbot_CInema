@@ -9,6 +9,11 @@ nlu:
     - oi cara
     - bom dia
     - boa tarde
+    - boa noite
+    - iae
+    - fala tu
+    - opa
+    - bão
 
 - intent: goodbye
   examples: |
@@ -29,6 +34,10 @@ nlu:
     - com certeza
     - claro
     - isso parece bom
+    - essi
+    - aham
+    - isso
+    - ok
     - correto
 
 - intent: deny
@@ -56,6 +65,10 @@ nlu:
     - extremamente bem
     - tão perfeito
     - tão bom
+    - estou bem
+    - hoje estou feliz
+    - hoje é bom
+    - bem
 
 - intent: mood_unhappy
   examples: |

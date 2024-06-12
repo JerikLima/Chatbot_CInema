@@ -74,19 +74,27 @@ class Cinema:
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
      }
      response = requests.get(url, headers=headers)
-     movie = []
+     movies = []
 
      if response.status_code == 200:
         data = response.json()  
-        filmes = data[0]['movies']  # Acessar a chave "movies" primeiro
-        titulos_filmes = [filme['title'] for filme in filmes] 
+        filmes = data[0]['movies'] 
 
-        if titulos_filmes:
-            print("Filmes disponíveis no cinema escolhido:")
-            for i in titulos_filmes:
-                movie.append(i)
+        if filmes:
+            for filme in filmes:
+                poster_url = next((img['url'] for img in filme['images'] if img['type'] == 'PosterPortrait'), None)
+                title = filme['title']
+                sessions = []
+                for room in filme['rooms']:
+                    for session in room['sessions']:
+                        sessions.append(session['date']['hour'])
+                movies.append({
+                    'title': title,
+                    'poster_url': poster_url,
+                    'sessions': sessions
+                })
         else:
             print("Não foram encontrados filmes disponíveis neste cinema.")
      else:
         print("Não foi possível obter os filmes do cinema.")
-     return "\n".join(movie)
+     return movies

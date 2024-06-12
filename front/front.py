@@ -1,11 +1,13 @@
 import streamlit as st
 import requests
-import json
+from PIL import Image
+from io import BytesIO
+import base64
 
-# Define the URL of the Rasa server
+# URL do seu servidor Rasa
 RASA_URL = "http://localhost:5005/webhooks/rest/webhook"
 
-# Function to send a message to Rasa and get a response
+# Função para enviar mensagem para o Rasa e obter a resposta
 def send_message(message):
     payload = {
         "sender": "user",
@@ -14,18 +16,36 @@ def send_message(message):
     headers = {
         "Content-Type": "application/json"
     }
-    response = requests.post(RASA_URL, data=json.dumps(payload), headers=headers)
+    response = requests.post(RASA_URL, json=payload, headers=headers)
     return response.json()
+
+# Função para exibir a imagem no Streamlit
+def display_image(image_url):
+    if image_url.startswith("data:image"):
+        image_base64 = image_url.split(",")[1]
+        image_data = base64.b64decode(image_base64)
+        image = Image.open(BytesIO(image_data))
+        st.image(image, caption='Filmes em Cartaz', use_column_width=True)  # Usar a largura da coluna
+    else:
+        st.warning("Formato de imagem não suportado.")
+
+# Função para exibir os botões
+def display_buttons(buttons, chat_index):
+    num_buttons = len(buttons)
+    for idx, button in enumerate(buttons):
+        if st.button(button["title"], key=f"button_{chat_index}_{idx}"):
+            response = send_message(button["payload"])
+            st.session_state.history.append({"user": button["title"], "bot": response})
 
 # Streamlit interface
 st.title("Chatbot de Cinema")
 st.write("Digite uma mensagem para começar a conversar com o bot.")
 
-# Initialize session state for chat history
+# Inicializar histórico da sessão para chat
 if "history" not in st.session_state:
     st.session_state.history = []
 
-# User input
+# Entrada do usuário
 user_input = st.text_input("Você: ", "")
 
 if st.button("Enviar"):
@@ -34,41 +54,22 @@ if st.button("Enviar"):
         st.session_state.history.append({"user": user_input, "bot": response})
         user_input = ""
 
-# Function to display bot response buttons
-def display_buttons(buttons, chat_index):
-    num_buttons = len(buttons)
-    half = (num_buttons + 1) // 2  # Calculate the middle index for splitting buttons into two rows
-
-    # Display the first row of buttons
-    row1 = st.columns(half)
-    for idx, button in enumerate(buttons[:half]):
-        button_key = f"button_{chat_index}_{idx}"
-        with row1[idx]:
-            if st.button(button["title"], key=button_key):
-                response = send_message(button["payload"])
-                st.session_state.history.append({"user": button["title"], "bot": response})
-
-    # Display the second row of buttons
-    row2 = st.columns(num_buttons - half)
-    for idx, button in enumerate(buttons[half:]):
-        button_key = f"button_{chat_index}_{half + idx}"
-        with row2[idx]:
-            if st.button(button["title"], key=button_key):
-                response = send_message(button["payload"])
-                st.session_state.history.append({"user": button["title"], "bot": response})
-
-# Display chat history
+# Exibir histórico do chat
 for chat_index, chat in enumerate(st.session_state.history):
     st.markdown(f"**Você:** {chat['user']}")
-    last_bot_response = ""  # Initialize a variable to store the last bot response
+    last_bot_response = ""
     for res in chat["bot"]:
-        if res["text"] != last_bot_response:
+        if "text" in res and res["text"] != last_bot_response:
             st.markdown(f"**Bot:** {res['text']}")
-            if "buttons" in res:
-                display_buttons(res["buttons"], chat_index)
-            last_bot_response = res["text"]  # Update the last bot response
+            last_bot_response = res["text"]
+        if "attachment" in res:
+            attachment = res["attachment"]
+            if attachment["type"] == "image":
+                display_image(attachment["content"])
+        if "buttons" in res:
+            display_buttons(res["buttons"], chat_index)
 
-# Add custom CSS
+# Adicionar CSS customizado
 st.markdown("""
     <style>
     .stButton>button {
@@ -86,20 +87,20 @@ st.markdown("""
     }
     .stTextInput>div>input {
         font-size: 18px;
-        padding: 10px;
+        padding: 10px.
     }
     .stChatMessage {
         padding: 10px;
         border-radius: 5px;
-        margin: 10px 0;
+        margin: 10px 0.
     }
     .userMessage {
         background-color: #dcf8c6;
-        text-align: right;
+        text-align: right.
     }
     .botMessage {
         background-color: #f1f0f0;
-        text-align: left;
+        text-align: left.
     }
     </style>
     """, unsafe_allow_html=True)
