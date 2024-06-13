@@ -32,7 +32,7 @@ class ActionProcurarCidade(Action):
             botoes = [{"title": cinema, "payload": f"/escolher_cinema{{\"cinema\":\"{cinema}\"}}"} for cinema in cinemas]
             dispatcher.utter_message(text=f"Aqui está a lista dos cinemas em {city}: \n", buttons=botoes)
         else:
-            dispatcher.utter_message(text="Desculpe, não reconhecemos essa cidade. Você pode tentar outra cidade?")
+            dispatcher.utter_message(text="Desculpe, não reconheço essa cidade. Confira se digitou o nome da cidade corretamente", image= "https://down-br.img.susercontent.com/file/sg-11134201-7rcc4-lsilxvzm26qz83")
         
         return [Cinema.obter_id_por_cidade(city)]
 

@@ -11,6 +11,7 @@ intents:
   - procurar_cidade
   - procurar_cinema
   - escolher_cinema
+  - piada
 
 entities:
   - cidade
@@ -32,28 +33,36 @@ slots:
 
 responses:
   utter_greet:
-    - text: "Opa! Tá afim de assistir um filme hj paizão?"
+    - text: "Bem vindo ao Cinebot! Estou aqui para lhe ajudar a achar os cinemas de sua cidade e seus respectivos filmes"
 
   utter_cheer_up:
-    - text: "Relaxa paizão, vai pro cinema que você se anima!"
+    - text: "Poxa, pois vamos tentar levantar seu ânimo. Quer que eu conte uma piada? Ou você prefere que eu te ajude a encontrar um cinema para assistir um filme?"
 
-  utter_did_that_help:
+  utter_help:
     - text: "Isso ajudou você?"
 
+  utter_jokes:
+    - text: "Por que o fantasma foi mal no teste de atuação? Porque ele não tinha corpo para o papel."
+    - text: "Qual é o filme favorito dos dentistas? O Dentista Mascarado"
+    - text: "Como se chama um dinossauro que adora filmes? Spielberg."
+    - text: "Por que o diretor de cinema foi preso? Porque ele fez muitos cortes na cidade."
   utter_happy:
     - text: "Para ficar mais feliz que isso, só um filmezin hoje..."
 
+  
   utter_goodbye:
-    - text: "Valeu, cuida nesse cine!"
+    - text: "Espero ter lhe ajudado, hasta la vista e boa sessão!"
+
+  utter_apology:
+    - text: "Poxa, desculpe não ter conseguido lhe ajudar."
+  utter_goodbye_joke:
+    - text: "Espero que você esteja melhor, até a próxima"
 
   utter_ask_cidade:
-    - text: "Em qual cidade você está procurando cinemas?"
-
-  utter_listar_cinemas:
-    - text: "Aqui estão os cinemas em {cidade}:"
+    - text: "Ainda estamos em estágio inicial, poderia nos fornecer sua cidade?"
 
   utter_iamabot:
-    - text: "Sou um bot de cinema feito por 2 crias do Irede"
+    - text: "Sou um robô desenvolvido por 2 estudantes do Irede."
 
 session_config:
   session_expiration_time: 60

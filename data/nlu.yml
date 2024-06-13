@@ -38,6 +38,7 @@ nlu:
     - aham
     - isso
     - ok
+    - obrigado
     - correto
 
 - intent: deny
@@ -85,6 +86,13 @@ nlu:
     - não muito bem
     - extremamente triste
     
+- intent: piada
+  examples: |
+   - me conte uma piada
+   - quero uma piada
+   - piada
+   - prefiro a piada
+
 
 - intent: bot_challenge
   examples: |

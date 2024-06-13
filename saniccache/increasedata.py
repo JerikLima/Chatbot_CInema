@@ -3,7 +3,7 @@ from sanic.response import json
 
 # Configuração personalizada
 app = Sanic("MyApp")
-app.config.REQUEST_MAX_SIZE = 500 * 1024 * 1024  # 500 MB
+app.config.REQUEST_MAX_SIZE = 1000 * 1024 * 1024  # 500 MB
 app.config.REQUEST_BUFFER_SIZE = 65536  # 64 KiB
 app.config.REQUEST_MAX_HEADER_SIZE = 8192  # 8 KiB
 

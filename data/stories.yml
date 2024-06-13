@@ -2,43 +2,56 @@ version: "3.1"
 
 stories:
 
-- story: happy path
+- story: Usuário está feliz
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
+    - intent: greet
+    - action: utter_greet
+    - intent: mood_great
+    - action: utter_happy
 
-- story: sad path 1
+- story: Usuário está triste e quer uma piada
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
+    - intent: mood_unhappy
+    - action: utter_cheer_up
+    - intent: piada
+    - action: utter_jokes
+    - intent: affirm
+    - action: utter_goodbye_joke
 
-- story: sad path 2
+- story: Usuário está triste e quer encontrar um filme
   steps:
-  - intent: mood_unhappy
-  - action: utter_cheer_up
+    - intent: mood_unhappy
+    - action: utter_cheer_up
+    - intent: procurar_cidade
+      entities:
+        - cidade: "cidade"
+    - action: action_procurar_cidade
+    - slot_was_set:
+        - cidade: "cidade"
+    - intent: escolher_cinema
+      entities:
+        - cidade: "cidade"
+        - cinema: "cinema"
+    - slot_was_set:
+        - cinema: "cinema"
+    - action: action_salvar_ids
+    - intent: affirm
+    - action: utter_goodbye
 
-- story: usuário quer encontrar cinemas de uma cidade
+- story: Usuário quer encontrar cinemas de uma cidade
   steps:
-  - intent: procurar_cidade
-    entities:
-      - cidade: "cidade"
-  - action: action_procurar_cidade
-  - slot_was_set:
-      - cidade: "cidade"
-  - intent: escolher_cinema
-    entities:
-      - cidade: "cidade"
-      - cinema: "cinema"
-  -  slot_was_set:
-      - cidade: "cidade"
-      - cinema: "cinema"
-  - action: action_salvar_ids
-
-
-
-
-
+    - intent: procurar_cidade
+      entities:
+        - cidade: "cidade"
+    - action: action_procurar_cidade
+    - slot_was_set:
+        - cidade: "cidade"
+    - intent: escolher_cinema
+      entities:
+        - cidade: "cidade"
+        - cinema: "cinema"
+    - slot_was_set:
+        - cinema: "cinema"
+    - action: action_salvar_ids
+    - intent: deny
+    - action: utter_apology
