@@ -1,28 +1,14 @@
+
+
 import json
+import unidecode
+from cinemapercity import Cinema
+from createbanner import create_movies_image
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet
 from typing import Any, Text, Dict, List
 
-class ActionSaveCity(Action):
-
-    def name(self) -> Text:
-        return "action_save_city"
-
-    def run(self, dispatcher: CollectingDispatcher,
-            tracker: Tracker,
-            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-
-        # Captura a entidade cidade
-        city_entity = next(tracker.get_latest_entity_values("cidade"), None)
-        
-        if city_entity:
-            dispatcher.utter_message(text=f"Você quer cinema de {city_entity}, correto?")
-            # Salva a cidade em uma variável (slot)
-            return [SlotSet("cidade", city_entity)]
-        else:
-            dispatcher.utter_message(text="Desculpe, não consegui identificar a cidade mencionada.")
-            return []
 
 class ActionProcurarCidade(Action):
 
@@ -34,19 +20,45 @@ class ActionProcurarCidade(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
         city = tracker.get_slot('cidade')
-        
         if not city:
-            dispatcher.utter_message(text="Por favor, mencione uma cidade.")
+            dispatcher.utter_message(text="Não foram encontrados cinemas nesse local")
             return []
 
         with open('data/cities.json', 'r', encoding='utf-8') as f:
             cities_data = json.load(f)
-        
-        cities = [entry['city'].lower() for entry in cities_data]
-
-        if city.lower() in cities:
-            dispatcher.utter_message(text=f"A cidade {city} foi encontrada.")
+        cities = [unidecode.unidecode(entry['city'].lower()) for entry in cities_data]
+        if unidecode.unidecode(city).lower() in cities:
+            cinemas = Cinema.obter_nome_cinema_por_cidade(city)
+            botoes = [{"title": cinema, "payload": f"/escolher_cinema{{\"cinema\":\"{cinema}\"}}"} for cinema in cinemas]
+            dispatcher.utter_message(text=f"Aqui está a lista dos cinemas em {city}: \n", buttons=botoes)
         else:
-            dispatcher.utter_message(text="Desculpe, não reconhecemos essa cidade. Você pode tentar outra cidade?")
+            dispatcher.utter_message(text="Desculpe, não reconheço essa cidade. Confira se digitou o nome da cidade corretamente", image= "https://down-br.img.susercontent.com/file/sg-11134201-7rcc4-lsilxvzm26qz83")
+        
+        return [Cinema.obter_id_por_cidade(city)]
+
+
+class ActionProcurarId(Action):
+
+    def name(self) -> Text:
+        return "action_salvar_ids"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        movie = tracker.get_slot('cinema')
+        city = tracker.get_slot('cidade')
+        city_id = Cinema.obter_id_por_cidade(city)
+        movie_id = Cinema.obter_id_por_cinema(movie, city_id)
+        movies_info = Cinema.filmes_por_cinema(city_id, movie_id)
+        image_base64 = create_movies_image(movies_info)
+        # Corrigir a string base64
+        image_base64 += "=" * ((4 - len(image_base64) % 4) % 4)
+        image_url = f"data:image/png;base64,{image_base64}"
+        
+        dispatcher.utter_message(text=f"Fala meu chapa, se liga nos filmes em cartaz no {movie}:\n")
+        dispatcher.utter_message(attachment={"type": "image", "content": image_url})
         
         return []
+
+

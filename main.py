@@ -1,4 +1,5 @@
 from cinemapercity import Cinema
+from actions import actions
 nome_cidade = input("Digite a cidade que você procura cinema: \n ")
 Cinema.obter_nome_cinema_por_cidade(nome_cidade)
 city_id = Cinema.obter_id_por_cidade(nome_cidade)

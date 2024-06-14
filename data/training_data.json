@@ -1,0 +1,1758 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "text": "São Paulo",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "São Paulo",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Rio de Janeiro",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 14,
+            "value": "Rio de Janeiro",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Belo Horizonte",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 14,
+            "value": "Belo Horizonte",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Fortaleza",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "Fortaleza",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Brasília",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "Brasília",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Salvador",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "Salvador",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Manaus",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "Manaus",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Santos",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "Santos",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Curitiba",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "Curitiba",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Recife",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "Recife",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Goiânia",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "Goiânia",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Porto Alegre",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 12,
+            "value": "Porto Alegre",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Guarulhos",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "Guarulhos",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Belém",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "Belém",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Campinas",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "Campinas",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "São Luís",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "São Luís",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "São Gonçalo",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 11,
+            "value": "São Gonçalo",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "João Pessoa",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 11,
+            "value": "João Pessoa",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Natal",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "Natal",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Santo André",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 11,
+            "value": "Santo André",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Osasco",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "Osasco",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Jaboatão",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "Jaboatão",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Aracaju",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "Aracaju",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Jaboatão dos Guararapes",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 23,
+            "value": "Jaboatão dos Guararapes",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Contagem",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "Contagem",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Macapá",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "Macapá",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Niterói",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "Niterói",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Ananindeua",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 10,
+            "value": "Ananindeua",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Vila Velha",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 10,
+            "value": "Vila Velha",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Mauá",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "Mauá",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Diadema",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "Diadema",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Carapicuíba",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 11,
+            "value": "Carapicuíba",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Olinda",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "Olinda",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Praia Grande",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 12,
+            "value": "Praia Grande",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Canoas",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "Canoas",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Paulista",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "Paulista",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "São Vicente",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 11,
+            "value": "São Vicente",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Ribeirão das Neves",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 18,
+            "value": "Ribeirão das Neves",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Vitória",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "Vitória",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Guarujá",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "Guarujá",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Taboão da Serra",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 15,
+            "value": "Taboão da Serra",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Arapiraca",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "Arapiraca",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Maracanaú",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "Maracanaú",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Itapevi",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "Itapevi",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "São Leopoldo",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 12,
+            "value": "São Leopoldo",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Hortolândia",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 11,
+            "value": "Hortolândia",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Lauro de Freitas",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 16,
+            "value": "Lauro de Freitas",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Alvorada",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "Alvorada",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Ferraz de Vasconcelos",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 21,
+            "value": "Ferraz de Vasconcelos",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Ibirité",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "Ibirité",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Francisco Morato",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 16,
+            "value": "Francisco Morato",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "São Caetano do Sul",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 18,
+            "value": "São Caetano do Sul",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Camarajibe",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 10,
+            "value": "Camarajibe",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Cachoeirinha",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 12,
+            "value": "Cachoeirinha",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Jandira",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "Jandira",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Várzea Paulista",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 15,
+            "value": "Várzea Paulista",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Poá",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "Poá",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "São Pedro da Aldeia",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 19,
+            "value": "São Pedro da Aldeia",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Iguatu",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "Iguatu",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Valença",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "Valença",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Barra do Corda",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 14,
+            "value": "Barra do Corda",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Serrinha",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "Serrinha",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Bayeux",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "Bayeux",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Senhor do Bonfim",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 16,
+            "value": "Senhor do Bonfim",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Esteio",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "Esteio",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Pacajus",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "Pacajus",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Campo Formoso",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 13,
+            "value": "Campo Formoso",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Brumado",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "Brumado",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Mineiros",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "Mineiros",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Biguaçu",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "Biguaçu",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Janaúba",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "Janaúba",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Itamaraju",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "Itamaraju",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Morada Nova",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 11,
+            "value": "Morada Nova",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Euclides da Cunha",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 17,
+            "value": "Euclides da Cunha",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Parobé",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "Parobé",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Pedro Leopoldo",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 14,
+            "value": "Pedro Leopoldo",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Ponte Nova",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 10,
+            "value": "Ponte Nova",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Ibiporã",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "Ibiporã",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Capitão Poço",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 12,
+            "value": "Capitão Poço",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Itapagé",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "Itapagé",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Coelho Neto",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 11,
+            "value": "Coelho Neto",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Campo Maior",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 11,
+            "value": "Campo Maior",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "São Sebastião do Passé",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 22,
+            "value": "São Sebastião do Passé",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Jacarèzinho",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 11,
+            "value": "Jacarèzinho",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Itaitinga",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "Itaitinga",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "São Desidério",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 13,
+            "value": "São Desidério",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "São Sebastião",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 13,
+            "value": "São Sebastião",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Monteiro",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "Monteiro",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Santo Antônio do Tauá",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 21,
+            "value": "Santo Antônio do Tauá",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "São Gotardo",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 11,
+            "value": "São Gotardo",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Riacho de Santana",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 17,
+            "value": "Riacho de Santana",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Bujaru",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "Bujaru",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Humberto de Campos",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 18,
+            "value": "Humberto de Campos",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Traipu",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "Traipu",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Quijingue",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "Quijingue",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Porto Calvo",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 11,
+            "value": "Porto Calvo",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Ipu",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "Ipu",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Arapoti",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "Arapoti",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Ibiapina",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "Ibiapina",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Matinha",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "Matinha",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Coração de Maria",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 16,
+            "value": "Coração de Maria",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Jaicós",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "Jaicós",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Passagem Franca",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 15,
+            "value": "Passagem Franca",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Ingá",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "Ingá",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Taperoá",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "Taperoá",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Elesbão Veloso",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 14,
+            "value": "Elesbão Veloso",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Destêrro",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "Destêrro",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Corumbiara",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 10,
+            "value": "Corumbiara",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Murici",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "Murici",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Pojuca",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "Pojuca",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Sítio Novo do Tocantins",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 23,
+            "value": "Sítio Novo do Tocantins",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Nossa Senhora do Ó",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 18,
+            "value": "Nossa Senhora do Ó",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Bacatu",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "Bacatu",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Cabo",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "Cabo",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Boa Vista",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "Boa Vista",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Feira Nova",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 10,
+            "value": "Feira Nova",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Milagres",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "Milagres",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Sapezal",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "Sapezal",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Campestre",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "Campestre",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Iracema",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "Iracema",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "São Domingos",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 12,
+            "value": "São Domingos",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Jaborandi",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "Jaborandi",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Vera Cruz",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "Vera Cruz",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Jaçanã",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "Jaçanã",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Ituverava",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "Ituverava",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Ouro Branco",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 11,
+            "value": "Ouro Branco",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Aparecida",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "Aparecida",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Taipu",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "Taipu",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Mari",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "Mari",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Retirolândia",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 12,
+            "value": "Retirolândia",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Tangará",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "Tangará",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Riberaozinho",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 12,
+            "value": "Riberaozinho",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Santa Teresa",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 12,
+            "value": "Santa Teresa",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Lago da Pedra",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 13,
+            "value": "Lago da Pedra",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Itinga da Serra",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 15,
+            "value": "Itinga da Serra",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Formosa",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "Formosa",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Chambioá",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "Chambioá",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Augusto Severo",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 14,
+            "value": "Augusto Severo",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Espírito Santo",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 14,
+            "value": "Espírito Santo",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Querência",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "Querência",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Perdizes",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "Perdizes",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Equador",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "Equador",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Viçosa",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "Viçosa",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Santana",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "Santana",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Iguaba",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "Iguaba",
+            "entity": "cidade"
+          }
+        ]
+      },
+      {
+        "text": "Canarana",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "Canarana",
+            "entity": "cidade"
+          }
+        ]
+      }
+    ]
+  }
+}

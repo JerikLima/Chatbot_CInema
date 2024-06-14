@@ -9,6 +9,11 @@ nlu:
     - oi cara
     - bom dia
     - boa tarde
+    - boa noite
+    - iae
+    - fala tu
+    - opa
+    - bão
 
 - intent: goodbye
   examples: |
@@ -29,6 +34,11 @@ nlu:
     - com certeza
     - claro
     - isso parece bom
+    - essi
+    - aham
+    - isso
+    - ok
+    - obrigado
     - correto
 
 - intent: deny
@@ -56,6 +66,10 @@ nlu:
     - extremamente bem
     - tão perfeito
     - tão bom
+    - estou bem
+    - hoje estou feliz
+    - hoje é bom
+    - bem
 
 - intent: mood_unhappy
   examples: |
@@ -72,6 +86,13 @@ nlu:
     - não muito bem
     - extremamente triste
     
+- intent: piada
+  examples: |
+   - me conte uma piada
+   - quero uma piada
+   - piada
+   - prefiro a piada
+
 
 - intent: bot_challenge
   examples: |
@@ -89,6 +110,19 @@ nlu:
     - Me diga quais cinemas tem no [Rio de Janeiro](cidade)
     - Quero ir no cinema com meu marido aqui em [Natal](cidade)
     - Me dê a lista de cinemas de [crateús](cidade)
+    - Liste os cinemas de [Campinas](cidade)
+    - Quero saber os cinemas em [Belém](cidade)
+    - Quais são os cinemas de [Salvador](cidade)?
+    - Onde posso encontrar cinemas em [Goiânia](cidade)?
+    - cinemas em [Santos](cidade)
+
+- intent: procurar_cinema
+  examples: |
+    - [cinemark](cinema)
+    - [cineflix](cinema)
+    - [uci](cinema)
+    - [kinoplex](cinema)
+
 
 - lookup: cidade
   examples: |
@@ -111,4 +145,11 @@ nlu:
     - Belém
     - Campinas
     - Vitória
+    - Cuiabá
+    - João Pessoa
+    - Teresina
+    - São Luis
+    - Maceió
+    - Aracaju
+    - Palmas
 

@@ -8,3 +8,4 @@ __pycache__
 # Tests
 train_test_splits
 results
+.vscode

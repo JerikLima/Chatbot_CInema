@@ -11,17 +11,21 @@ assistant_id: 20240528-151625-central-dam
 language: pt
 
 pipeline:
-# # No configuration for the NLU pipeline was provided. The following default pipeline was used to train your model.
-# # If you'd like to customize it, uncomment and adjust the pipeline.
-# # See https://rasa.com/docs/rasa/tuning-your-model for more information.
 - name: SpacyNLP
   model: "pt_core_news_md"
+- name: SpacyTokenizer
 - name: SpacyEntityExtractor
   dimensions: ["GPE"]
-- name: SpacyTokenizer
+- name: CRFEntityExtractor
+  features:
+    - ["low", "title", "upper"]
+    - ["bias", "low", "prefix5", "prefix2", "suffix5", "suffix3", "suffix2", "suffix1", "digit"]
+    - ["low", "title", "upper"]
+- name: EntitySynonymMapper
+- name: RegexEntityExtractor
+  case_sensitive: false
 - name: RegexFeaturizer
 - name: LexicalSyntacticFeaturizer
-- name: CountVectorsFeaturizer
 - name: CountVectorsFeaturizer
   analyzer: char_wb
   min_ngram: 1
